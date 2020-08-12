@@ -11,7 +11,7 @@ namespace Controle
         {
             InitializeComponent();
 
-            MainPage = new InserirPage();
+            MainPage = new AdicionarPage();
         }
 
         protected override void OnStart()

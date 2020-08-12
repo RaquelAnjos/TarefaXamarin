@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Controle.Dados;
+
 using Controle.Modelos;
 
 namespace Controle.Views
