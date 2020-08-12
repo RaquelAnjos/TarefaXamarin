@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Controle.Views.InserirPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout>
+                <Frame Margin="10"  BackgroundColor="LightGray" CornerRadius="10">
+                    <StackLayout Spacing="0">
+                        <Label Text="Data" TextColor="Blue" FontSize="Medium" />
+                        <DatePicker x:Name="DataEntry" TextColor="Blue" FontSize="Medium"/>
+                    </StackLayout>
+                </Frame >
+            </StackLayout>
+            <StackLayout>
+                <Frame Margin="10"  BackgroundColor="LightGray" CornerRadius="10">
+                    <StackLayout Spacing="0">
+                        <Label Text="Descrição" TextColor="Blue" FontSize="Medium"/>
+                        <Entry x:Name="DescricaoEntry"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame Margin="10"  BackgroundColor="LightGray" CornerRadius="10">
+                    <StackLayout Spacing="0">
+                        <Label Text="Valor" TextColor="Blue" FontSize="Medium"/>
+                        <Entry x:Name="ValorEntry"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Button Clicked="Button_Clicked" Text="Adicionar" TextColor="White" BackgroundColor="Blue" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
