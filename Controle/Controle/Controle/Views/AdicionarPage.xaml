@@ -4,20 +4,28 @@
              x:Class="Controle.Views.AdicionarPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Adicionar" Clicked="Button_Clicked" />
+            <StackLayout Orientation="Horizontal" BackgroundColor="Pink" Spacing="100">
+            <Label Text ="Data"/>
+            <Label Text="Descrição" />
+            <Label Text="Valor"/>
+            </StackLayout>
             <ListView VerticalOptions="FillAndExpand" x:Name="ControleLista">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="100">
                                 <Label Text="{Binding Data}" FontSize="Micro"/>
-                                <Label Text="{Binding Descricao}" FontSize="Micro"/>
-                                <Label Text="{Binding Valor}" FontSize="Micro"/>
+                                <Label Text="{Binding Descricao}"  FontSize="Micro"/>
+                                <Label Text="{Binding Valor}"  FontSize="Micro"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                 <Button Text="Adicionar" BackgroundColor="Pink"  HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked" CornerRadius="10" />
+                <Button Text="Apagar" BackgroundColor="Pink"  HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_1" CornerRadius="10"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using System.IO;
 using Controle.Dados;
 using System.Runtime.CompilerServices;
+using Controle.Modelos;
 
 namespace Controle.Views
 {
@@ -31,6 +32,13 @@ namespace Controle.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new InserirPage());
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            
+   
+            
         }
     }
 }
