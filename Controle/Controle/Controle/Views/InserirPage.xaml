@@ -5,32 +5,32 @@
     <ContentPage.Content>
         <StackLayout >
             <StackLayout>
-                <Frame Margin="10"  BackgroundColor="RosyBrown" CornerRadius="10">
+                <Frame Margin="10"  BackgroundColor="Gray" CornerRadius="10">
                     <StackLayout Spacing="0">
-                        <Label Text="Data" TextColor="Pink" FontSize="Medium" />
-                        <DatePicker x:Name="DataEntry" TextColor="Pink" FontSize="Medium"/>
+                        <Label Text="Data" TextColor="Gray" FontSize="Medium" />
+                        <DatePicker x:Name="DataEntry" TextColor="Black" FontSize="Medium"/>
                     </StackLayout>
                 </Frame >
             </StackLayout>
             <StackLayout>
-                <Frame Margin="10"  BackgroundColor="RosyBrown" CornerRadius="10">
+                <Frame Margin="10"  BackgroundColor="Gray" CornerRadius="10">
                     <StackLayout Spacing="0">
-                        <Label Text="Descrição" TextColor="Pink" FontSize="Medium"/>
+                        <Label Text="Descrição" TextColor="Black" FontSize="Medium"/>
                         <Entry x:Name="DescricaoEntry"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
 
             <StackLayout>
-                <Frame Margin="10"  BackgroundColor="RosyBrown" CornerRadius="10">
+                <Frame Margin="10"  BackgroundColor="Gray" CornerRadius="10">
                     <StackLayout Spacing="0">
-                        <Label Text="Valor" TextColor="Pink" FontSize="Medium"/>
+                        <Label Text="Valor" TextColor="Black" FontSize="Medium"/>
                         <Entry x:Name="ValorEntry"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
 
-            <Button Clicked="Button_Clicked" Text="Adicionar" BackgroundColor="pink" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+            <Button Clicked="Button_Clicked" Text="Adicionar" TextColor="White" CornerRadius="10" BackgroundColor="Black" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

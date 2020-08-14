@@ -4,27 +4,27 @@
              x:Class="Controle.Views.AdicionarPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" BackgroundColor="Pink" Spacing="100">
-            <Label Text ="Data"/>
-            <Label Text="Descrição" />
-            <Label Text="Valor"/>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Black" Spacing="100" >
+            <Label Text ="Data" FontSize="Small" TextColor="White"/>
+                <Label Text="Descrição" FontSize="Small" TextColor="White" />
+                <Label Text="Valor" FontSize="Small" TextColor="White"/>
             </StackLayout>
             <ListView VerticalOptions="FillAndExpand" x:Name="ControleLista">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" Spacing="100">
-                                <Label Text="{Binding Data}" FontSize="Micro"/>
-                                <Label Text="{Binding Descricao}"  FontSize="Micro"/>
-                                <Label Text="{Binding Valor}"  FontSize="Micro"/>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <Label Text="{Binding Data}" FontSize="Small"/>
+                                <Label Text="{Binding Descricao}"  FontSize="Small"/>
+                                <Label Text="{Binding Valor}"  FontSize="Small"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                 <Button Text="Adicionar" BackgroundColor="Pink"  HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked" CornerRadius="10" />
-                <Button Text="Apagar" BackgroundColor="Pink"  HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_1" CornerRadius="10"/>
+                 <Button Text="Adicionar" TextColor="White" BackgroundColor="Black "  HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked" CornerRadius="10" />
+                <Button Text="Apagar" TextColor="White" BackgroundColor="Black " HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked_1" CornerRadius="10"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

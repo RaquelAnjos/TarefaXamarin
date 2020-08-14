@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Controle.Modelos
 {
-    public class Elementos
+    public class Elemento
     {
         public int Id { get; set; }
 

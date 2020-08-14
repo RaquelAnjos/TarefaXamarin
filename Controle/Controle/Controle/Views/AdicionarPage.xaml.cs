@@ -25,8 +25,8 @@ namespace Controle.Views
         {
             base.OnAppearing();
             string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Controle.db");
-            var elementosDatabase = new ElementosDatabase(dbPath);
-            ControleLista.ItemsSource = await elementosDatabase.ConsultarTodosAsync();
+            var elementoDatabase = new ElementoDatabase(dbPath);
+            ControleLista.ItemsSource = await elementoDatabase.ConsultarTodosAsync();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -34,11 +34,13 @@ namespace Controle.Views
             await Navigation.PushModalAsync(new InserirPage());
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            
-   
-            
+
+
+
+            ControleLista.ItemsSource = await elementoDatabase.ConsultarTodosAsync();
+
         }
     }
 }

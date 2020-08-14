@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using SQLite;
 using Controle.Modelos;
+using System.Threading.Tasks;
+
 
 namespace Controle.Dados
 {
-     public class ElementosDatabase
+    class ElementoDatabase
     {
         readonly SQLiteAsyncConnection database;
 
-        public ElementosDatabase(String dbPath)
+        public ElementoDatabase(String dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Elementos>().Wait();
+            database.CreateTableAsync<Elemento>().Wait();
         }
 
-        public Task<int> SalvarPetAsync (Elementos elementos)
+        public Task<int> SalvarElementosAsync(Elemento elementos)
         {
             if (elementos.Id == 0)
             {
@@ -29,9 +30,15 @@ namespace Controle.Dados
             }
         }
 
-        public Task<List<Elementos>> ConsultarTodosAsync()
+        public Task<List<Elemento>> ConsultarTodosAsync()
         {
-            return database.Table<Elementos>().ToListAsync();
+            return database.Table<Elemento>().ToListAsync();
         }
+
+        public Task<int> DeleteElementosAsync(Elemento elementos)
+        {
+            return database.DeleteAsync(elementos);
+        }
+
     }
 }
